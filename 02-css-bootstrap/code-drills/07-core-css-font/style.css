@@ -1,0 +1,26 @@
+h2  {
+    font-size:40px;
+    font-style:bold;
+}
+h3 {
+    line-height:30px;
+    font-style:italic;
+}
+.hi {
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.hello {
+    font-family: 'Poor Story', cursive;
+
+}
+
+.bye {
+    font-family: 'Spicy Rice', cursive;
+
+}
+
+.bored {
+    font-family: 'Open Sans', sans-serif;
+}
