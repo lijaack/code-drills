@@ -6,7 +6,7 @@
 
 /* Will style every class containing the characters "col-" */
 /* We need to do this only in this circumstance to make our colored columns behave how we want them to */
-[class^="col-"] {
+[class="col-12"] {
   padding: 0;
 }
 
