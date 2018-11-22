@@ -3,7 +3,7 @@ $(document).ready(function () {
     $(document).on("click", "#randomLetter", function() {
 
         // create variable called `text` and have it equal an empty string
-        var text=""
+        var randLetter=""
         
         // create a variable called `possibleLetters` that contains all the letters of the alphabet
 
