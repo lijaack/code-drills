@@ -3,10 +3,12 @@
 
 
 // wait for the DOM to finish loading (document.ready)
+$(document).ready(function(){
+
 
 
   // Create a click listener for the submit button
-
+  
 
     // stop the default behavior of the submit button
 
@@ -27,4 +29,4 @@
 
     // empty the display area and display the divs we just created in the display area
 
-
+})
