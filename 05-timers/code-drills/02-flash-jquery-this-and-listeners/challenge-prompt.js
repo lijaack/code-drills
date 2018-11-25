@@ -6,11 +6,10 @@
 // display the string in the display-area when clicked later.
 function createButton(str) {
   // ---------- Your Code Here ----------
-
-
-
-
-
+    var newButton = $("<button class='contentBtn'>");
+    newButton.text(str);
+    newButton.attr("data", str);
+    $("#button-area").append(newButton);
 
   // ---------- End of Code area ----------
 }
@@ -25,7 +24,7 @@ function createButton(str) {
 // that was clicked on and append it to the display-area.
 function displayContent(event) {
   // ---------- Your Code Here ----------
-
+  $("#display-area").append($(this).attr("data"));
 
 
 
@@ -40,6 +39,18 @@ function displayContent(event) {
 // Put your click listeners here.
 $(function () {
   // ---------- Your Code Here ----------
+  $(document).on("click", "#submit-button", function(event){
+    event.preventDefault();
+    createButton($("#user-input").val());
+    $("#user-input").val("");
+  });
+
+  $(document).on("click", "#clear-button", function(event){
+    event.preventDefault();
+    $("#display-area").empty();
+  });
+
+  $(document).on("click", ".contentBtn", displayContent);
 
 
 
