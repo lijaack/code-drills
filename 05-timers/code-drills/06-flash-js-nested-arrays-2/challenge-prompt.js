@@ -26,8 +26,14 @@ function returnCustomObject(arr){
 	var obj ={};
   
   // ---------- Your Code Here ----------
-
-
+   for (var i= 0; i< arr.length; i++){
+      if (obj[arr[i]]) {
+         obj[arr[i]]++;
+      } else {
+         obj[arr[i]] = 1;
+      }
+      
+   }
 
 
 
@@ -65,10 +71,18 @@ console.log("==================== Question 02  ====================");
 
 function greatestFrequency(toyInventory){
   var maxToy, maxNum;
+  maxToy="";
+  maxNum=0;
   
   // ---------- Your Code Here ----------
-
-
+   console.log()
+//struggled with this one. i'm guessing "val" is a placeholder variable to call the objects in the array?
+for (val in toyInventory) {
+      if (toyInventory[val] > maxNum){
+         maxToy = [val];
+         maxNum = toyInventory[val];
+      }
+   }
 
 
 
@@ -99,7 +113,10 @@ function toyArrToObj(arrayOfToys){
   var toyArrayOfObjs = [];
 
   // ---------- Your Code Here ----------
-
+  
+   for (var i = 0; i < arrayOfToys.length; i++){
+      toyArrayOfObjs.push( {name: arrayOfToys[i]});
+   }
 
 
 
@@ -216,7 +233,25 @@ function createCustomObject(objectArr){
 	customToyLineObj = {};
 
   // ---------- Your Code Here ----------
+   for (var i = 0; i < objectArr.length; i++){
+      console.log(objectArr[i].toyLine);
+      var toyline = objectArr[i].toyLine;
+      var name = objectArr[i].title;
+      var stock = objectArr[i].stock;
 
+      if (customToyLineObj[toyline]){
+         customToyLineObj[toyline].toyLineToys.push(name)
+         customToyLineObj[toyline].totalToysInToyLine += stock;
+      } else{
+         customToyLineObj[toyline] = {
+            toyLine: toyline,
+            toyLineToys: [name],
+            totalToysInToyLine: stock
+         };
+      }
+
+
+   }
 
 
 
@@ -261,8 +296,16 @@ console.log("==================== Question 05  ====================");
 function areDups(arr){
 
   // ---------- Your Code Here ----------
-
-
+  var checkNum = []
+   for (i = 0; i < arr.length; i++){
+      
+      if (checkNum.indexOf(arr[i]) > -1){
+         return true;     
+      }  else {
+         checkNum.push(arr[i]);
+      }
+   }
+   return false
 
 
 
