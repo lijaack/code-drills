@@ -72,7 +72,7 @@
 
 
     // STEP 4: Based on your research of this API, assign a value to queryURL you think is appropriate to retrieve the top news stories in the US. 
-    var queryURL = "";
+    var queryURL = "https://newsapi.org/v2/everything?q=bitcoin&from=2018-10-26&sortBy=publishedAt&apiKey=2ebde39926644ef095784558ed389df1";
 
 
     $.ajax({
@@ -100,7 +100,15 @@
         // The title of each article should go in the h3 with the class of title
         // The author of each article should go in the p tag with the class of author
         // The description of the article should go in the p tag with the class of desc
+        for (var i =0; i<5; i++){
+          if (!response.articles[i].author) {
+            response.articles[i].author = "Santa Clause"
+          }
 
+          $(".appendMe").append('<div><h3 class="title">' + response.articles[i].title + '</h3><p class="author">' + response.articles[i].author + '</p><p class="desc">' + response.articles[i].description +'</p><hr></div>');
+           
+          console.log(response)
+        }
 
 
 
