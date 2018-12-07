@@ -92,6 +92,7 @@ console.log("==================== Question 04 ====================");
 function addToObject(obj, key, arr) {
 
   // -------------------- Your Code Here --------------------
+  obj[key] = arr;
 
 
   
