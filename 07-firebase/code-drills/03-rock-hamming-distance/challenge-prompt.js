@@ -5,7 +5,17 @@
 function hamming(str1, str2) {
 
   // -------------------- Your Code Here --------------------
-
+  if (str1.length === str2.length){
+    var different = 0;
+    for( var i = 0; i < str1.length; i++){
+      if (str1[i] != str2[i]){
+        different++;
+      }
+    }
+    return(different);
+  } else {
+    return("Please pass two strings of equal length to this function");
+  }
 
   
   
