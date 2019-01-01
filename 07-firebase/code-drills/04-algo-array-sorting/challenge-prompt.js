@@ -13,7 +13,6 @@
 
 
 
-
 // --------------------- End Code Area --------------------
 
 
@@ -22,11 +21,38 @@
 // -------------------------------------------------------
 function upDownSort(arr) {
   // -------------------- Your Code Here --------------------
+  var evens = [];
+  var odds = [];
 
+  for (var i = 0; i < arr.length; i++){
+    if (arr[i] % 2 === 0){
+      evens.push(arr[i]);
+    } else {
+      odds.push(arr[i]);
+    }
+  }
+  console.log(evens);
+  console.log(odds)
+  for(var i = 0; i < evens.length; i++){
 
+    if (evens[i] > evens[i+1]){
+      hold = evens[i+1];
+      evens[i+1] = evens[i];
+      evens[i] = hold;
+      i=-1;
+    }
+  }
 
+  for( var i = 0; i < odds.length; i++){
+    if (odds[i] < odds[i+1]){
+      var hold = odds[i];
+      odds[i] = odds[i+1];
+      odds[i+1] = hold;
+      i=-1;
+    }
+  }
 
-
+  return evens + "," + odds;
   // --------------------- End Code Area --------------------
 }
 
