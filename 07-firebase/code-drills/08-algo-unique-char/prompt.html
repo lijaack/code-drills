@@ -12,10 +12,17 @@
   <script>
     function unique(str) {
     // ====================== YOUR WORK HERE ===================
+      var object ={};
+      for (var i = 0; str.length > i; i++){
+        console.log(str[i])
+        if (object[str[i]]){
+          return false
+        }else {
+          object[str[i]]=1
+        }
+      }
 
-
-
-
+      return true
 
     // =========================================================
     }
