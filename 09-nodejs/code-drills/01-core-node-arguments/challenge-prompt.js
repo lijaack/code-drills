@@ -7,7 +7,7 @@
 
 // ---------- code starts here ----------
 
-
+console.log("hello world")
 
 
 
@@ -19,7 +19,7 @@
 
 // ---------- code starts here ---------- 
 
-
+console.log(process.argv)
 
 
 
@@ -34,7 +34,11 @@
 // ---------- code starts here ---------- 
 
 
+var argOne = process.argv[2]
+var argTwo = process.argv[3]
 
+console.log(argOne)
+console.log(argTwo)
 
 
 
@@ -48,10 +52,13 @@
 
 // ---------- code starts here ---------- 
 
-
-
-
-
+if(argOne === "minion" && argTwo === "army"){
+    console.log("I have found Gru")
+  } else if(argOne === "minion"){
+    console.log("Still looking for Gru")
+  } else {
+    console.log("Minion RAGE!")
+  }
 
 
 // ---------- code ends here ---------- 
